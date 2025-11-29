@@ -77,15 +77,16 @@ git clone https://github.com/Vixys54/dbdjs-bdfd-panel
 > EXTRAÇÃO (EXPLICAÇÃO)
 
 • Extraia o arquivo ZIP usando o Zarchiver da Playstore ou instale para extrair:
-
 ```
-
+pkg install wget unzip
 ```
 
 use para extrair:
 ```
-
+wget https://github.com/Vixys54/dbdjs-bdfd-panel/archive/refs/heads/main.zip -O dbdjs-bdfd-panel.zip && unzip dbdjs-bdfd-panel.zip && rm dbdjs-bdfd-panel.zip && cd dbdjs-bdfd-panel-main
 ```
+
+• ls (ver pastas e arquivos), cd (entrar em pastas).
 
 > INSTALE O PYTHON:
 ```
