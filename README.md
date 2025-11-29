@@ -104,6 +104,16 @@ pkg install python -y
 pip install flask gunicorn python-dotenv markupsafe
 ```
 
+> INSTALE ESSAS DEPENDÊNCIAS (Em caso de erros):
+```
+pkg install clang make python binutils libopus ffmpeg -y
+```
+
+> INSTALE O GYP (NECESSÁRIO PARA INSTALAR OS RECURSOS DO DBD.JS)
+```
+npm install -g node-pre-gyp
+```
+
 > INSTALE O DBD.JS:
 ```
 npm install dbd.js --no-bin-links
