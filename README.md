@@ -117,6 +117,9 @@ python servidor.py
 # ↑↑↑ ↑↑↑ ↑↑↑
 > ANTES DE LIGAR A BOT NO PAINEL, CONFIGURE O .ENV:
 
+
+|
+|
 Chave (ID do seu bot):
 ```
 BOT_ID
