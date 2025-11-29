@@ -54,6 +54,12 @@ mkdir storage/downloads/dbdjs-bdfd-panel
 cd storage/downloads/dbdjs-bdfd-panel
 ```
 
+
+> COPIAR O PROJETO (BAIXAR PARA PASTA QUE VOCÊ ESCOLHEEU):
+```
+git clone https://github.com/Vixys54/dbdjs-bdfd-panel
+```
+
 > INSTALE O PYTHON:
 ```
 pkg install python -y
@@ -69,8 +75,6 @@ pip install flash
 pkg install git
 ```
 
-> COPIAR O PROJETO (BAIXAR PARA PASTA QUE VOCÊ ESCOLHEEU):
-```
-git clone https://github.com/Vixys54/dbdjs-bdfd-panel
-```
+
+
 
