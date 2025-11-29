@@ -58,6 +58,10 @@ cd storage/downloads/dbdjs-bdfd-panel
 ```
 pkg install nodejs -y
 ```
+> OU:
+```
+pkg install nodejs-lts
+```
 
 > INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL):
 ```
@@ -97,7 +101,7 @@ pkg install python -y
 
 > INSTALE AS DEPENDÊNCIAS: 
 ```
-pip install flask
+pip install flask gunicorn python-dotenv markupsafe
 ```
 
 
