@@ -27,3 +27,11 @@ pip install flask
 ```
 
 
+#INSTALAÇÃO VIA TERMUX:
+
+> PYTHON:
+```
+pkg install python -y
+```
+
+
