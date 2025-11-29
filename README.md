@@ -18,7 +18,7 @@ npm install -g dbd.js
 # INSTALAÇÃO PYTHON
 
 INSTALE O PYTHON SE NÂO TIVER
-CLIQUE AQUI: (Download)[https://link]
+CLIQUE AQUI: [Download](https://link)
 
 
 Instale as depend~encias do python:
