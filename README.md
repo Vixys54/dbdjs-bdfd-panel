@@ -116,7 +116,7 @@ npm install -g node-pre-gyp
 
 > INSTALE O DBD.JS:
 ```
-npm install dbd.js --no-bin-links
+npm install dbd.js --no-bin-links --build-from-source
 ```
 
 > EXECUTE O PAINEL:
