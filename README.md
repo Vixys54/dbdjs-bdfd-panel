@@ -74,6 +74,19 @@ pkg update && pkg upgrade -y
 git clone https://github.com/Vixys54/dbdjs-bdfd-panel
 ```
 
+> EXTRAÇÃO (EXPLICAÇÃO)
+
+• Extraia o arquivo ZIP usando o Zarchiver da Playstore ou instale para extrair:
+
+```
+
+```
+
+use para extrair:
+```
+
+```
+
 > INSTALE O PYTHON:
 ```
 pkg install python -y
