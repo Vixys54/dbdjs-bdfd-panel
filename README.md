@@ -15,7 +15,7 @@ depois:
 npm install -g dbd.js
 ```
 
-# INSTALAÇÃO PYTHON
+# INSTALAÇÃO PYTHON (Windows/Linux/Mac?)
 
 INSTALE O PYTHON SE NÂO TIVER
 CLIQUE AQUI: [Download](https://www.python.org/downloads/release/python-3108/)
