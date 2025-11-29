@@ -87,6 +87,7 @@ wget https://github.com/Vixys54/dbdjs-bdfd-panel/archive/refs/heads/main.zip -O 
 ```
 
 • ls (ver pastas e arquivos), cd (entrar em pastas).
+• arquivos .bat não são necessários no termux, você pode apagar, são apenas executáveis que funciona no windows.
 
 > INSTALE O PYTHON:
 ```
