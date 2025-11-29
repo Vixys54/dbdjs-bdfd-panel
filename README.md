@@ -106,7 +106,7 @@ pip install flask gunicorn python-dotenv markupsafe
 
 > INSTALE O DBD.JS:
 ```
-npm install dbd.js
+npm install dbd.js --no-bin-links
 ```
 
 > EXECUTE O PAINEL:
