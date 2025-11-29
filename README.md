@@ -37,10 +37,12 @@ pip install flask
 
 
 
-
-
-
 # INSTALAÇÃO VIA TERMUX:
+
+> PERMISSÃO DE ARMAZENAMENTO:
+```
+termux-setup-storage
+```
 
 > INSTALE O PYTHON:
 ```
