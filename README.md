@@ -55,6 +55,11 @@ cd storage/downloads/dbdjs-bdfd-panel
 ```
 
 
+> INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL "ZIP"):
+```
+pkg install git
+```
+
 > COPIAR O PROJETO (BAIXAR PARA PASTA QUE VOCÊ ESCOLHEEU):
 ```
 git clone https://github.com/Vixys54/dbdjs-bdfd-panel
@@ -68,11 +73,6 @@ pkg install python -y
 > INSTALE AS DEPENDÊNCIAS: 
 ```
 pip install flash
-```
-
-> INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL "ZIP"):
-```
-pkg install git
 ```
 
 
