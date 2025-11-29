@@ -64,6 +64,11 @@ pkg install nodejs
 pkg install git
 ```
 
+> ATUALIZE OS PACOTES PARA EVITAR BUGS:
+```
+pkg update && pkg upgrade -y
+```
+
 > COPIAR O PROJETO (BAIXAR PARA PASTA QUE VOCÊ ESCOLHEEU):
 ```
 git clone https://github.com/Vixys54/dbdjs-bdfd-panel
