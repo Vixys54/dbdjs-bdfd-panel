@@ -104,6 +104,47 @@ pkg install python -y
 pip install flask gunicorn python-dotenv markupsafe
 ```
 
+> INSTALE O DBD.JS:
+```
+npm install dbd.js
+```
 
+> EXECUTE O PAINEL:
+```
+python servidor.py
+```
 
+# ↑↑↑ ↑↑↑ ↑↑↑
+> ANTES DE LIGAR A BOT NO PAINEL, CONFIGURE O .ENV:
+
+Chave (ID do seu bot):
+```
+BOT_ID
+```
+Valor:
+```
+ID DO SEU BOT #Opcional, pega no Deceloper Portal.
+```
+|
+|
+Chave:
+```
+BOT_TOKEN
+```
+Valor:
+```
+TOKEN DO SEU BOT (OBRIGATÓRIO PRA FUNCIONAR)
+```
+|
+|
+Chave:
+```
+OWNER_ID
+```
+Valor:
+```
+SEU ID DO DISCORD
+```
+
+= fim =
 
