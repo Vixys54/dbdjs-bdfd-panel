@@ -54,8 +54,13 @@ pkg install python -y
 pip install flash
 ```
 
-> INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL "ZIP")
+> INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL "ZIP"):
 ```
 pkg install git
+```
+
+> COPIAR O PROJETO (BAIXAR PARA PASTA QUE VOCÊ ESCOLHEEU):
+```
+git clone https://github.com/Vixys54/dbdjs-bdfd-panel
 ```
 
