@@ -54,3 +54,8 @@ pkg install python -y
 pip install flash
 ```
 
+> INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL "ZIP")
+```
+pkg install git
+```
+
