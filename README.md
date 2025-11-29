@@ -54,6 +54,10 @@ mkdir storage/downloads/dbdjs-bdfd-panel
 cd storage/downloads/dbdjs-bdfd-panel
 ```
 
+> INSTALE O NODEJS (NECESSÁRIO PARA USAR O BOT):
+```
+pkg install nodejs
+```
 
 > INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL "ZIP"):
 ```
