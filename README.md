@@ -27,11 +27,28 @@ pip install flask
 ```
 
 
-#INSTALAÇÃO VIA TERMUX:
 
-> PYTHON:
+
+
+# ↓↓↓ ↓↓↓ ↓↓↓ ↓↓↓
+
+
+
+
+
+
+
+
+
+# INSTALAÇÃO VIA TERMUX:
+
+> INSTALE O PYTHON:
 ```
 pkg install python -y
 ```
 
+> INSTALE AS DEPENDÊNCIAS: 
+```
+pip install flash
+```
 
