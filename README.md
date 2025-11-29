@@ -44,6 +44,16 @@ pip install flask
 termux-setup-storage
 ```
 
+> CRIA UMA PASTA CHAMADA (dbdjs-bdfd-panel), EM SUA PASTA DOWNLOADS:
+```
+mkdir storage/downloads/dbdjs-bdfd-panel
+```
+
+> ENTRA NA PASTA:
+```
+cd storage/downloads/dbdjs-bdfd-panel
+```
+
 > INSTALE O PYTHON:
 ```
 pkg install python -y
