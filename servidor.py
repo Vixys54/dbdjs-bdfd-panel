@@ -369,12 +369,40 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     padding: 0 2px;
+    color: #ffa500;  /* LARANJA para os colchetes */
+}
+
+.code-editor .command-closed-content {
+    /* Gradiente roxo-rosa molhado */
+    background: linear-gradient(135deg, 
+        rgba(186, 85, 211, 0.4) 0%,
+        rgba(219, 112, 214, 0.3) 25%,
+        rgba(199, 21, 133, 0.35) 50%,
+        rgba(219, 112, 214, 0.3) 75%,
+        rgba(186, 85, 211, 0.4) 100%);
+    color: #da70d6;  /* Roxo/Magenta */
+    padding: 2px 4px;
+    border-radius: 20px;
 }
 
 .code-editor .command-open {
     background-color: rgba(255, 0, 0, 0.3);
     border-radius: 3px;
     padding: 0 2px;
+    color: #ffa500;  /* LARANJA para os colchetes */
+}
+
+.code-editor .command-open-content {
+    /* Gradiente roxo-rosa molhado */
+    background: linear-gradient(135deg, 
+        rgba(186, 85, 211, 0.4) 0%,
+        rgba(219, 112, 214, 0.3) 25%,
+        rgba(199, 21, 133, 0.35) 50%,
+        rgba(219, 112, 214, 0.3) 75%,
+        rgba(186, 85, 211, 0.4) 100%);
+    color: #da70d6;  /* Roxo/Magenta */
+    padding: 2px 4px;
+    border-radius: 20px;
 }
     </style>
 </head>
@@ -684,12 +712,11 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         
         // Syntax Highlighting
         function applySyntaxHighlighting(editor) {
-    // Salvar posição do cursor de forma mais confiável
+    // Salvar posição do cursor
     const selection = window.getSelection();
     let cursorOffset = 0;
     
     if (selection.rangeCount > 0 && editor.contains(selection.anchorNode)) {
-        // Contar caracteres desde o início até o cursor
         const range = selection.getRangeAt(0).cloneRange();
         range.selectNodeContents(editor);
         range.setEnd(selection.getRangeAt(0).endContainer, selection.getRangeAt(0).endOffset);
@@ -706,10 +733,10 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;');
     
-    // 1. URLs
+    // ===== FASE 1: URLs =====
     html = html.replace(/(https?:\/\/[^\s]+)/g, '<span class="token-link">$1</span>');
     
-    // 2. Flow Commands (ordem: maior pra menor)
+    // ===== FASE 2: Flow Commands =====
     html = html.replace(/\$endif(?![a-zA-Z0-9_])/g, '<span class="token-flow">$endif</span>');
     html = html.replace(/\$endfor(?![a-zA-Z0-9_])/g, '<span class="token-flow">$endfor</span>');
     html = html.replace(/\$endwhile(?![a-zA-Z0-9_])/g, '<span class="token-flow">$endwhile</span>');
@@ -719,7 +746,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     html = html.replace(/\$for(?![a-zA-Z0-9_])/g, '<span class="token-flow">$for</span>');
     html = html.replace(/\$while(?![a-zA-Z0-9_])/g, '<span class="token-flow">$while</span>');
     
-    // 3. Outros comandos $
+    // ===== FASE 3: Outros comandos $ =====
     html = html.replace(/\$[a-zA-Z_][a-zA-Z0-9_]*/g, function(match) {
         const flowCommands = ['$if', '$elseif', '$else', '$endif', '$for', '$endfor', '$while', '$endwhile'];
         if (!flowCommands.includes(match) && !match.includes('span')) {
@@ -728,38 +755,16 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         return match;
     });
     
-    // 4. Comandos com colchetes FECHADOS (colocar marcador temporário)
-    html = html.replace(/\[([^\[\]]*)\]/g, '<<<CLOSED>>>[$1]<<<\/CLOSED>>>');
+    // ===== FASE 4: Colchetes - SIMPLES E RÁPIDO =====
+    // Colchetes FECHADOS: [ com conteúdo até ] na mesma linha ou próxima
+    html = html.replace(/\[([^\[\]]*)\]/g, '<span class="command-closed">[<span class="command-closed-content">$1</span>]</span>');
     
-    // 5. Comandos com colchetes ABERTOS (colocar marcador temporário)
-    html = html.replace(/\[([^\[\]]*?)$/gm, '<<<OPEN>>>[$1<<<\/OPEN>>>');
-    
-    // 6. Convertendo marcadores para spans
-    html = html.replace(/<<<CLOSED>>>/g, '<span class="command-closed">');
-    html = html.replace(/<<<\/CLOSED>>>/g, '</span>');
-    html = html.replace(/<<<OPEN>>>/g, '<span class="command-open">');
-    html = html.replace(/<<<\/OPEN>>>/g, '</span>');
-    
-    // 7. Apenas [ ] - SEM processar ;
-    let parts = html.split(/<span[^>]*>.*?<\/span>/g);
-    let spans = html.match(/<span[^>]*>.*?<\/span>/g) || [];
-    
-    for (let i = 0; i < parts.length; i++) {
-        parts[i] = parts[i].replace(/\[/g, '<span class="token-symbol">[</span>');
-        parts[i] = parts[i].replace(/\]/g, '<span class="token-symbol">]</span>');
-    }
-    
-    html = '';
-    for (let i = 0; i < parts.length; i++) {
-        html += parts[i];
-        if (i < spans.length) {
-            html += spans[i];
-        }
-    }
+    // Colchetes ABERTOS: [ no final de linha sem ]
+    html = html.replace(/\[([^\[\]]*?)$/gm, '<span class="command-open">[<span class="command-open-content">$1</span></span>');
     
     editor.innerHTML = html;
     
-    // Restaurar posição do cursor de forma mais confiável
+    // Restaurar posição do cursor
     try {
         const range = document.createRange();
         let charCount = 0;
@@ -786,7 +791,6 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         selection.removeAllRanges();
         selection.addRange(range);
     } catch (e) {
-        // Se falhar, apenas foca no editor
         editor.focus();
     }
 }
