@@ -59,7 +59,7 @@ cd storage/downloads/dbdjs-bdfd-panel
 pkg install nodejs
 ```
 
-> INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL "ZIP"):
+> INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL):
 ```
 pkg install git
 ```
@@ -76,7 +76,7 @@ git clone https://github.com/Vixys54/dbdjs-bdfd-panel
 
 > EXTRAÇÃO (EXPLICAÇÃO)
 
-• Extraia o arquivo ZIP usando o Zarchiver da Playstore ou instale para extrair:
+• Extraia o arquivo ZIP usando o Zarchiver da Playstore ou instale para extrair (se baixar compactado em zip):
 ```
 pkg install wget unzip
 ```
