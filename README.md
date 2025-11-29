@@ -56,12 +56,12 @@ cd storage/downloads/dbdjs-bdfd-panel
 
 > INSTALE O NODEJS (NECESSÁRIO PARA USAR O BOT):
 ```
-pkg install nodejs
+pkg install nodejs -y
 ```
 
 > INSTALE O GIT (OPCIONAL: SERVE PARA BAIXAR O PAINEL VIA CURL):
 ```
-pkg install git
+pkg install git -y
 ```
 
 > ATUALIZE OS PACOTES PARA EVITAR BUGS:
@@ -88,6 +88,7 @@ wget https://github.com/Vixys54/dbdjs-bdfd-panel/archive/refs/heads/main.zip -O 
 
 • ls (ver pastas e arquivos), cd (entrar em pastas).
 • arquivos .bat não são necessários no termux, você pode apagar, são apenas executáveis que funciona no windows.
+• se por acaso durante as instalações aparecer [y/n] escreva apenas "y" para "sim" para instalar os pacotes e dependências.
 
 > INSTALE O PYTHON:
 ```
@@ -96,7 +97,7 @@ pkg install python -y
 
 > INSTALE AS DEPENDÊNCIAS: 
 ```
-pip install flash
+pip install flask
 ```
 
 
